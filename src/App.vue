@@ -1,7 +1,9 @@
 <template>
   <main class="main">
     <SideBar />
-    
+    <div class="main-content">
+      <router-view name="MainContent"/>
+    </div>
   </main>
 </template>
 
@@ -27,7 +29,7 @@ export default {
   --outer-space: #495057ff;
   --onyx: #343a40ff;
   --eerie-black: #212529ff;
-  --semi-black:#0e0e0e;
+  --semi-black: #0e0e0e;
   --black: #050505;
 }
 </style>
@@ -36,8 +38,13 @@ export default {
 
 main {
   background-color: var(--black);
-  min-width: 100%;
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.main-content {
+  width: 100%;
 }
 
 </style>
