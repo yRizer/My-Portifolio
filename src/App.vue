@@ -1,13 +1,9 @@
 <template>
   <main class="main">
     <SideBar />
-<<<<<<< HEAD
-    <div class="main-content"></div>
-=======
     <div class="main-content">
       <router-view name="MainContent"/>
     </div>
->>>>>>> 1349517
   </main>
 </template>
 
@@ -33,13 +29,8 @@ export default {
   --outer-space: #495057ff;
   --onyx: #343a40ff;
   --eerie-black: #212529ff;
-<<<<<<< HEAD
-  --semi-black:#0e0e0e;
-  --black: #000000;
-=======
   --semi-black: #0e0e0e;
   --black: #050505;
->>>>>>> 1349517
 }
 </style>
 

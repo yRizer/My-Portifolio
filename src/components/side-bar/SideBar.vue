@@ -2,10 +2,7 @@
     <div class="side-bar">
         <div class="indexes-menu">
             <div class="indexes-header"></div>
-<<<<<<< HEAD
-=======
             <router-view name="SideBarContent"/>
->>>>>>> 1349517
             <div class="indexes-menu-indicator"></div>
         </div>
         <div class="right-menu">
@@ -25,10 +22,6 @@ export default {
     methods: {
 
         SetPositionIndicator(event) {
-<<<<<<< HEAD
-=======
-
->>>>>>> 1349517
             const menuItem = event.target
             const indexesMenu = document.querySelector(".indexes-menu")
             const indexesMenuIndicator = indexesMenu.querySelector(".indexes-menu-indicator")
@@ -38,17 +31,11 @@ export default {
             indexesMenuIndicator.style.top = `${newTopPosition}px`
 
         }
-<<<<<<< HEAD
 
     }
 }
 
 
-=======
-    }
-}
-
->>>>>>> 1349517
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
