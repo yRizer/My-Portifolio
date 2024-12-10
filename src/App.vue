@@ -1,7 +1,7 @@
 <template>
   <main class="main">
     <SideBar />
-    
+    <div class="main-content"></div>
   </main>
 </template>
 
@@ -28,7 +28,7 @@ export default {
   --onyx: #343a40ff;
   --eerie-black: #212529ff;
   --semi-black:#0e0e0e;
-  --black: #050505;
+  --black: #000000;
 }
 </style>
 

@@ -2,13 +2,14 @@
     <div class="side-bar">
         <div class="indexes-menu">
             <div class="indexes-header"></div>
+            <div class="indexes-menu-indicator"></div>
         </div>
         <div class="right-menu">
             <ul class="list-options">
-                <li class="option-menu"></li>
-                <li class="option-menu"></li>
-                <li class="option-menu"></li>
-                <li class="option-menu"></li>
+                <li class="option-menu" @click="SetPositionIndicator($event)"></li>
+                <li class="option-menu" @click="SetPositionIndicator($event)"></li>
+                <li class="option-menu" @click="SetPositionIndicator($event)"></li>
+                <li class="option-menu" @click="SetPositionIndicator($event)"></li>
             </ul>
         </div>
     </div>
@@ -17,12 +18,23 @@
 <script>
 export default {
     name: 'SideBar',
+    methods: {
+
+        SetPositionIndicator(event) {
+            const menuItem = event.target
+            const indexesMenu = document.querySelector(".indexes-menu")
+            const indexesMenuIndicator = indexesMenu.querySelector(".indexes-menu-indicator")
+
+            var newTopPosition = menuItem.offsetTop + menuItem.offsetHeight / 2 - indexesMenuIndicator.offsetHeight / 2
+
+            indexesMenuIndicator.style.top = `${newTopPosition}px`
+
+        }
+
+    }
 }
 
-mounted(){
-    var allOptionMenu = document.querySelectorAll('.option-menu')
-    console.log(allOptionMenu);
-}
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -45,6 +57,16 @@ mounted(){
     background-color: #ffff001e;
     height: 100%;
     width: 300px;
+    display: flex;
+    position: relative;
+}
+
+.indexes-menu-indicator {
+    width: 5px;
+    height: 5px;
+    background-color: blue;
+    position: absolute;
+    right: 0;
 }
 
 .indexes-header {
