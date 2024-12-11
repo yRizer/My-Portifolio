@@ -7,8 +7,8 @@
         </div>
         <div class="right-menu">
             <ul class="list-options">
-                <router-link to="/" class="option-menu" @click="SetPositionIndicator($event)"></router-link>
-                <router-link to="/projetos" class="option-menu" @click="SetPositionIndicator($event)"></router-link>
+                <router-link to="/" class="option-menu" @click="SetPositionIndicator($event)"><img src="../assets/image/sidebar/Home.png" alt="Imagem Casa"></router-link>
+                <router-link to="/projetos" class="option-menu" @click="SetPositionIndicator($event)"><img src="../assets/image/sidebar/Person.png" alt=""></router-link>
                 <router-link to="/" class="option-menu" @click="SetPositionIndicator($event)"></router-link>
                 <router-link to="/" class="option-menu" @click="SetPositionIndicator($event)"></router-link>
             </ul>
@@ -46,6 +46,7 @@ export default {
     width: 350px;
     height: 100vh;
     display: flex;
+    color: var(--antiflash-white);
     background-color: var(--semi-black);
 }
 
@@ -53,29 +54,30 @@ export default {
     width: 50px;
     height: 100%;
     right: 0;
-    background-color: #ff00001c;
 }
 
 .indexes-menu {
-    background-color: #ffff001e;
     height: 100%;
     width: 300px;
     display: flex;
     align-items: center;
     flex-direction: column;
     position: relative;
+    background-color: var(--eerie-black);
 }
 
 .indexes-menu-indicator {
-    width: 5px;
-    height: 5px;
-    background-color: blue;
+    width: 0px;
+    height: 0px;
+    background-color: #0000ff00;
     position: absolute;
-    right: 0;
+    right: -10px;
+    border-left: 10px solid var(--eerie-black);
+    border-block: 8px solid #0000;
+    transition: 0.4s;
 }
 
 .indexes-header {
-    background-color: rgba(0, 0, 255, 0.13);
     width: 100%;
     height: 50px;
     display: flex;
@@ -101,6 +103,18 @@ export default {
 .option-menu {
     width: 40px;
     height: 40px;
-    background-color: rgba(51, 255, 0, 0.603);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.option-menu:hover {
+    background-color: rgba(255, 255, 255, 0.023);
+}
+
+.option-menu img {
+    width: 50%;
 }
 </style>

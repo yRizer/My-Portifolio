@@ -9,7 +9,7 @@ const routes = [
          SideBarContent: import('../views/side-content/HomeSide.vue')
         },
         meta:{
-            title:"Home"
+            title:"Inicio"
         }
     },
 ]

@@ -15,7 +15,7 @@ export default {
 <style scoped>
     .main-section {
         width: 90%;
-        height: 80%;
+        height: 100%;
         background-color: var(--eerie-black);
     }
 </style>
