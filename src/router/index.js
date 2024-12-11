@@ -3,11 +3,14 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
     {
         path: '/',
-        name: 'teste',
+        name: 'home',
         components: {
-         MainContent: import('../views/main-content/home.vue'),
-         SideBarContent: import('../views/side-content/home.vue')
+         MainContent: import('../views/main-content/HomeMain.vue'),
+         SideBarContent: import('../views/side-content/HomeSide.vue')
         },
+        meta:{
+            title:"Home"
+        }
     },
 ]
 

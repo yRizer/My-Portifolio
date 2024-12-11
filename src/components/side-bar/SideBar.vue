@@ -1,16 +1,16 @@
 <template>
     <div class="side-bar">
         <div class="indexes-menu">
-            <div class="indexes-header"></div>
+            <div class="indexes-header">{{ titulo }}</div>
             <router-view name="SideBarContent"/>
             <div class="indexes-menu-indicator"></div>
         </div>
         <div class="right-menu">
             <ul class="list-options">
-                <li class="option-menu" @click="SetPositionIndicator($event)"></li>
-                <li class="option-menu" @click="SetPositionIndicator($event)"></li>
-                <li class="option-menu" @click="SetPositionIndicator($event)"></li>
-                <li class="option-menu" @click="SetPositionIndicator($event)"></li>
+                <router-link to="/" class="option-menu" @click="SetPositionIndicator($event)"></router-link>
+                <router-link to="/projetos" class="option-menu" @click="SetPositionIndicator($event)"></router-link>
+                <router-link to="/" class="option-menu" @click="SetPositionIndicator($event)"></router-link>
+                <router-link to="/" class="option-menu" @click="SetPositionIndicator($event)"></router-link>
             </ul>
         </div>
     </div>
@@ -31,11 +31,13 @@ export default {
             indexesMenuIndicator.style.top = `${newTopPosition}px`
 
         }
-
+    },
+    data(){
+        return {
+            titulo: this.$route.meta.title
+        }
     }
 }
-
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -59,6 +61,8 @@ export default {
     height: 100%;
     width: 300px;
     display: flex;
+    align-items: center;
+    flex-direction: column;
     position: relative;
 }
 
